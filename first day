@@ -1,0 +1,30 @@
+keyword: const； pointer（*）； reference（&）； constexpr； another name of type（using && typedef）； top/base level of const； decltype； auto
+
+一、const 
+const可以是顶层const（top level of const），也可以是底层const（base level of const），前者表示对象本身是一个常量，后者表示指针或者引用指向的对象是一个常量。
+顶层const：
+1、const int a = 1；
+2、const int * p；
+3、const int & r = a；
+
+底层const：
+1、int * const p = &a；
+
+区分顶层const和底层const可以将一个表达式从右向左开始读。
+
+二、constexpr
+声明为constexpr时用到的类型称为“字面值类型”，留坑，以后补
+
+三、using && typedef
+using SI = sale item；
+typedef int * haha；
+
+注意：使用typedef的时候不要简单地进行替换，而要将(int *)看成一个整体，这里涉及到了顶层const和底层const的概念。
+
+四、decltype
+decltype（a） b = x；
+b和a是同一个类型
+
+五、auto
+auto i = 0；
+编译器自动检测类型
